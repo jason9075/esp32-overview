@@ -1,0 +1,466 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 920" width="1100" height="920">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e222b"/>
+      <stop offset="100%" stop-color="#14171d"/>
+    </linearGradient>
+    <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e2e8f0"/>
+      <stop offset="100%" stop-color="#94a3b8"/>
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#000" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+  <rect width="1100" height="920" fill="url(#bgGrad)" rx="16"/>
+  <!-- Header -->
+  <text x="550" y="45" font-family="sans-serif" font-size="22" font-weight="700" fill="#eceff4" text-anchor="middle">ESP32 NodeMCU-32S (38-Pin Type-C) 完整硬體腳位對應圖</text>
+  <text x="550" y="70" font-family="sans-serif" font-size="13" fill="#88c0d0" text-anchor="middle">雙核心 Xtensa LX6 @ 240MHz · 2.4 GHz Wi-Fi + Bluetooth 4.2 · USB Type-C</text>
+  <g filter="url(#shadow)">
+    <rect x="420" y="110" width="260" height="760" rx="12" fill="#1e242c" stroke="#333c4a" stroke-width="2"/>
+    <!-- USB Type-C Receptacle at bottom -->
+    <rect x="505" y="825" width="90" height="40" rx="6" fill="#cbd5e1" stroke="#94a3b8" stroke-width="2"/>
+    <rect x="515" y="835" width="70" height="20" rx="3" fill="#0f172a"/>
+    <text x="550" y="848" font-family="sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle">TYPE-C</text>
+    <!-- ESP-WROOM-32 Module at top -->
+    <rect x="445" y="140" width="210" height="230" rx="6" fill="#0f172a" stroke="#252e39"/>
+    <rect x="455" y="200" width="190" height="160" rx="6" fill="url(#shieldGrad)"/>
+    <text x="550" y="250" font-family="sans-serif" font-size="13" font-weight="700" fill="#1e293b" text-anchor="middle">Espressif</text>
+    <text x="550" y="275" font-family="sans-serif" font-size="15" font-weight="800" fill="#0f172a" text-anchor="middle">ESP-WROOM-32</text>
+    <text x="550" y="300" font-family="sans-serif" font-size="10" fill="#334155" text-anchor="middle">FCC ID: 2AC7Z-ESPWROOM32</text>
+    <!-- MIFA Antenna Traces -->
+    <path d="M 470 155 h 160 v 15 h -40 v 15 h 40" stroke="#f59e0b" stroke-width="3" fill="none"/>
+    <!-- CP2102 IC -->
+    <rect x="515" y="470" width="70" height="70" rx="4" fill="#0b0f14" stroke="#475569"/>
+    <text x="550" y="505" font-family="sans-serif" font-size="10" font-weight="600" fill="#94a3b8" text-anchor="middle">SILABS</text>
+    <text x="550" y="522" font-family="sans-serif" font-size="9" fill="#64748b" text-anchor="middle">CP2102</text>
+    <!-- AMS1117 -->
+    <rect x="460" y="590" width="70" height="45" rx="3" fill="#0b0f14" stroke="#475569"/>
+    <text x="495" y="618" font-family="sans-serif" font-size="9" fill="#94a3b8" text-anchor="middle">AMS1117</text>
+    <!-- EN & BOOT Buttons -->
+    <rect x="455" y="770" width="40" height="35" rx="4" fill="#64748b"/>
+    <rect x="465" y="777" width="20" height="20" rx="10" fill="#1e293b"/>
+    <text x="475" y="760" font-family="sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle">EN</text>
+    <rect x="605" y="770" width="40" height="35" rx="4" fill="#64748b"/>
+    <rect x="615" y="777" width="20" height="20" rx="10" fill="#1e293b"/>
+    <text x="625" y="760" font-family="sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle">BOOT</text>
+  </g>
+  <!-- Pin 1 (Left) -->
+  <circle cx="435" cy="140" r="7" fill="#ebcb8b" stroke="#1e242c" stroke-width="2"/>
+  <text x="435" y="144" font-family="sans-serif" font-size="9" font-weight="700" fill="#1e242c" text-anchor="middle">1</text>
+  <!-- Label Card Left -->
+  <g transform="translate(55, 125)">
+    <rect width="365" height="30" rx="6" fill="#252b36" stroke="#ebcb8b" stroke-opacity="0.4" stroke-width="1.5"/>
+    <rect width="70" height="30" rx="6" fill="#ebcb8b" fill-opacity="0.2"/>
+    <text x="35" y="19" font-family="sans-serif" font-size="11" font-weight="700" fill="#ebcb8b" text-anchor="middle">3V3</text>
+    <text x="80" y="19" font-family="sans-serif" font-size="11" fill="#eceff4">3.3V 穩壓電源輸出</text>
+  </g>
+  <line x1="420" y1="140" x2="427" y2="140" stroke="#ebcb8b" stroke-width="1.5"/>
+  <!-- Pin 2 (Left) -->
+  <circle cx="435" cy="178" r="7" fill="#d08770" stroke="#1e242c" stroke-width="2"/>
+  <text x="435" y="182" font-family="sans-serif" font-size="9" font-weight="700" fill="#1e242c" text-anchor="middle">2</text>
+  <!-- Label Card Left -->
+  <g transform="translate(55, 163)">
+    <rect width="365" height="30" rx="6" fill="#252b36" stroke="#d08770" stroke-opacity="0.4" stroke-width="1.5"/>
+    <rect width="70" height="30" rx="6" fill="#d08770" fill-opacity="0.2"/>
+    <text x="35" y="19" font-family="sans-serif" font-size="11" font-weight="700" fill="#d08770" text-anchor="middle">EN</text>
+    <text x="80" y="19" font-family="sans-serif" font-size="11" fill="#eceff4">晶片重設／致能 (CHIP_PU)</text>
+  </g>
+  <line x1="420" y1="178" x2="427" y2="178" stroke="#d08770" stroke-width="1.5"/>
+  <!-- Pin 3 (Left) -->
+  <circle cx="435" cy="216" r="7" fill="#8fbcbb" stroke="#1e242c" stroke-width="2"/>
+  <text x="435" y="220" font-family="sans-serif" font-size="9" font-weight="700" fill="#1e242c" text-anchor="middle">3</text>
+  <!-- Label Card Left -->
+  <g transform="translate(55, 201)">
+    <rect width="365" height="30" rx="6" fill="#252b36" stroke="#8fbcbb" stroke-opacity="0.4" stroke-width="1.5"/>
+    <rect width="70" height="30" rx="6" fill="#8fbcbb" fill-opacity="0.2"/>
+    <text x="35" y="19" font-family="sans-serif" font-size="11" font-weight="700" fill="#8fbcbb" text-anchor="middle">VP</text>
+    <text x="80" y="19" font-family="sans-serif" font-size="11" fill="#eceff4">類比輸入 ADC1_CH0 (僅能輸入)</text>
+  </g>
+  <line x1="420" y1="216" x2="427" y2="216" stroke="#8fbcbb" stroke-width="1.5"/>
+  <!-- Pin 4 (Left) -->
+  <circle cx="435" cy="254" r="7" fill="#8fbcbb" stroke="#1e242c" stroke-width="2"/>
+  <text x="435" y="258" font-family="sans-serif" font-size="9" font-weight="700" fill="#1e242c" text-anchor="middle">4</text>
+  <!-- Label Card Left -->
+  <g transform="translate(55, 239)">
+    <rect width="365" height="30" rx="6" fill="#252b36" stroke="#8fbcbb" stroke-opacity="0.4" stroke-width="1.5"/>
+    <rect width="70" height="30" rx="6" fill="#8fbcbb" fill-opacity="0.2"/>
+    <text x="35" y="19" font-family="sans-serif" font-size="11" font-weight="700" fill="#8fbcbb" text-anchor="middle">VN</text>
+    <text x="80" y="19" font-family="sans-serif" font-size="11" fill="#eceff4">類比輸入 ADC1_CH3 (僅能輸入)</text>
+  </g>
+  <line x1="420" y1="254" x2="427" y2="254" stroke="#8fbcbb" stroke-width="1.5"/>
+  <!-- Pin 5 (Left) -->
+  <circle cx="435" cy="292" r="7" fill="#8fbcbb" stroke="#1e242c" stroke-width="2"/>
+  <text x="435" y="296" font-family="sans-serif" font-size="9" font-weight="700" fill="#1e242c" text-anchor="middle">5</text>
+  <!-- Label Card Left -->
+  <g transform="translate(55, 277)">
+    <rect width="365" height="30" rx="6" fill="#252b36" stroke="#8fbcbb" stroke-opacity="0.4" stroke-width="1.5"/>
+    <rect width="70" height="30" rx="6" fill="#8fbcbb" fill-opacity="0.2"/>
+    <text x="35" y="19" font-family="sans-serif" font-size="11" font-weight="700" fill="#8fbcbb" text-anchor="middle">D34</text>
+    <text x="80" y="19" font-family="sans-serif" font-size="11" fill="#eceff4">類比輸入 ADC1_CH6 (僅能輸入)</text>
+  </g>
+  <line x1="420" y1="292" x2="427" y2="292" stroke="#8fbcbb" stroke-width="1.5"/>
+  <!-- Pin 6 (Left) -->
+  <circle cx="435" cy="330" r="7" fill="#8fbcbb" stroke="#1e242c" stroke-width="2"/>
+  <text x="435" y="334" font-family="sans-serif" font-size="9" font-weight="700" fill="#1e242c" text-anchor="middle">6</text>
+  <!-- Label Card Left -->
+  <g transform="translate(55, 315)">
+    <rect width="365" height="30" rx="6" fill="#252b36" stroke="#8fbcbb" stroke-opacity="0.4" stroke-width="1.5"/>
+    <rect width="70" height="30" rx="6" fill="#8fbcbb" fill-opacity="0.2"/>
+    <text x="35" y="19" font-family="sans-serif" font-size="11" font-weight="700" fill="#8fbcbb" text-anchor="middle">D35</text>
+    <text x="80" y="19" font-family="sans-serif" font-size="11" fill="#eceff4">類比輸入 ADC1_CH7 (僅能輸入)</text>
+  </g>
+  <line x1="420" y1="330" x2="427" y2="330" stroke="#8fbcbb" stroke-width="1.5"/>
+  <!-- Pin 7 (Left) -->
+  <circle cx="435" cy="368" r="7" fill="#88c0d0" stroke="#1e242c" stroke-width="2"/>
+  <text x="435" y="372" font-family="sans-serif" font-size="9" font-weight="700" fill="#1e242c" text-anchor="middle">7</text>
+  <!-- Label Card Left -->
+  <g transform="translate(55, 353)">
+    <rect width="365" height="30" rx="6" fill="#252b36" stroke="#88c0d0" stroke-opacity="0.4" stroke-width="1.5"/>
+    <rect width="70" height="30" rx="6" fill="#88c0d0" fill-opacity="0.2"/>
+    <text x="35" y="19" font-family="sans-serif" font-size="11" font-weight="700" fill="#88c0d0" text-anchor="middle">D32</text>
+    <text x="80" y="19" font-family="sans-serif" font-size="11" fill="#eceff4">ADC1_CH4 / 觸控 Touch9</text>
+  </g>
+  <line x1="420" y1="368" x2="427" y2="368" stroke="#88c0d0" stroke-width="1.5"/>
+  <!-- Pin 8 (Left) -->
+  <circle cx="435" cy="406" r="7" fill="#88c0d0" stroke="#1e242c" stroke-width="2"/>
+  <text x="435" y="410" font-family="sans-serif" font-size="9" font-weight="700" fill="#1e242c" text-anchor="middle">8</text>
+  <!-- Label Card Left -->
+  <g transform="translate(55, 391)">
+    <rect width="365" height="30" rx="6" fill="#252b36" stroke="#88c0d0" stroke-opacity="0.4" stroke-width="1.5"/>
+    <rect width="70" height="30" rx="6" fill="#88c0d0" fill-opacity="0.2"/>
+    <text x="35" y="19" font-family="sans-serif" font-size="11" font-weight="700" fill="#88c0d0" text-anchor="middle">D33</text>
+    <text x="80" y="19" font-family="sans-serif" font-size="11" fill="#eceff4">ADC1_CH5 / 觸控 Touch8</text>
+  </g>
+  <line x1="420" y1="406" x2="427" y2="406" stroke="#88c0d0" stroke-width="1.5"/>
+  <!-- Pin 9 (Left) -->
+  <circle cx="435" cy="444" r="7" fill="#b48ead" stroke="#1e242c" stroke-width="2"/>
+  <text x="435" y="448" font-family="sans-serif" font-size="9" font-weight="700" fill="#1e242c" text-anchor="middle">9</text>
+  <!-- Label Card Left -->
+  <g transform="translate(55, 429)">
+    <rect width="365" height="30" rx="6" fill="#252b36" stroke="#b48ead" stroke-opacity="0.4" stroke-width="1.5"/>
+    <rect width="70" height="30" rx="6" fill="#b48ead" fill-opacity="0.2"/>
+    <text x="35" y="19" font-family="sans-serif" font-size="11" font-weight="700" fill="#b48ead" text-anchor="middle">D25</text>
+    <text x="80" y="19" font-family="sans-serif" font-size="11" fill="#eceff4">DAC1 類比輸出 / ADC2_CH8</text>
+  </g>
+  <line x1="420" y1="444" x2="427" y2="444" stroke="#b48ead" stroke-width="1.5"/>
+  <!-- Pin 10 (Left) -->
+  <circle cx="435" cy="482" r="7" fill="#b48ead" stroke="#1e242c" stroke-width="2"/>
+  <text x="435" y="486" font-family="sans-serif" font-size="9" font-weight="700" fill="#1e242c" text-anchor="middle">10</text>
+  <!-- Label Card Left -->
+  <g transform="translate(55, 467)">
+    <rect width="365" height="30" rx="6" fill="#252b36" stroke="#b48ead" stroke-opacity="0.4" stroke-width="1.5"/>
+    <rect width="70" height="30" rx="6" fill="#b48ead" fill-opacity="0.2"/>
+    <text x="35" y="19" font-family="sans-serif" font-size="11" font-weight="700" fill="#b48ead" text-anchor="middle">D26</text>
+    <text x="80" y="19" font-family="sans-serif" font-size="11" fill="#eceff4">DAC2 類比輸出 / ADC2_CH9</text>
+  </g>
+  <line x1="420" y1="482" x2="427" y2="482" stroke="#b48ead" stroke-width="1.5"/>
+  <!-- Pin 11 (Left) -->
+  <circle cx="435" cy="520" r="7" fill="#88c0d0" stroke="#1e242c" stroke-width="2"/>
+  <text x="435" y="524" font-family="sans-serif" font-size="9" font-weight="700" fill="#1e242c" text-anchor="middle">11</text>
+  <!-- Label Card Left -->
+  <g transform="translate(55, 505)">
+    <rect width="365" height="30" rx="6" fill="#252b36" stroke="#88c0d0" stroke-opacity="0.4" stroke-width="1.5"/>
+    <rect width="70" height="30" rx="6" fill="#88c0d0" fill-opacity="0.2"/>
+    <text x="35" y="19" font-family="sans-serif" font-size="11" font-weight="700" fill="#88c0d0" text-anchor="middle">D27</text>
+    <text x="80" y="19" font-family="sans-serif" font-size="11" fill="#eceff4">觸控 Touch7 / ADC2_CH7</text>
+  </g>
+  <line x1="420" y1="520" x2="427" y2="520" stroke="#88c0d0" stroke-width="1.5"/>
+  <!-- Pin 12 (Left) -->
+  <circle cx="435" cy="558" r="7" fill="#81a1c1" stroke="#1e242c" stroke-width="2"/>
+  <text x="435" y="562" font-family="sans-serif" font-size="9" font-weight="700" fill="#1e242c" text-anchor="middle">12</text>
+  <!-- Label Card Left -->
+  <g transform="translate(55, 543)">
+    <rect width="365" height="30" rx="6" fill="#252b36" stroke="#81a1c1" stroke-opacity="0.4" stroke-width="1.5"/>
+    <rect width="70" height="30" rx="6" fill="#81a1c1" fill-opacity="0.2"/>
+    <text x="35" y="19" font-family="sans-serif" font-size="11" font-weight="700" fill="#81a1c1" text-anchor="middle">D14</text>
+    <text x="80" y="19" font-family="sans-serif" font-size="11" fill="#eceff4">HSPI_CLK / 觸控 Touch6</text>
+  </g>
+  <line x1="420" y1="558" x2="427" y2="558" stroke="#81a1c1" stroke-width="1.5"/>
+  <!-- Pin 13 (Left) -->
+  <circle cx="435" cy="596" r="7" fill="#81a1c1" stroke="#1e242c" stroke-width="2"/>
+  <text x="435" y="600" font-family="sans-serif" font-size="9" font-weight="700" fill="#1e242c" text-anchor="middle">13</text>
+  <!-- Label Card Left -->
+  <g transform="translate(55, 581)">
+    <rect width="365" height="30" rx="6" fill="#252b36" stroke="#81a1c1" stroke-opacity="0.4" stroke-width="1.5"/>
+    <rect width="70" height="30" rx="6" fill="#81a1c1" fill-opacity="0.2"/>
+    <text x="35" y="19" font-family="sans-serif" font-size="11" font-weight="700" fill="#81a1c1" text-anchor="middle">D12</text>
+    <text x="80" y="19" font-family="sans-serif" font-size="11" fill="#eceff4">HSPI_MISO / 觸控 Touch5</text>
+  </g>
+  <line x1="420" y1="596" x2="427" y2="596" stroke="#81a1c1" stroke-width="1.5"/>
+  <!-- Pin 14 (Left) -->
+  <circle cx="435" cy="634" r="7" fill="#616e88" stroke="#1e242c" stroke-width="2"/>
+  <text x="435" y="638" font-family="sans-serif" font-size="9" font-weight="700" fill="#1e242c" text-anchor="middle">14</text>
+  <!-- Label Card Left -->
+  <g transform="translate(55, 619)">
+    <rect width="365" height="30" rx="6" fill="#252b36" stroke="#616e88" stroke-opacity="0.4" stroke-width="1.5"/>
+    <rect width="70" height="30" rx="6" fill="#616e88" fill-opacity="0.2"/>
+    <text x="35" y="19" font-family="sans-serif" font-size="11" font-weight="700" fill="#616e88" text-anchor="middle">GND</text>
+    <text x="80" y="19" font-family="sans-serif" font-size="11" fill="#eceff4">系統接地 (0V)</text>
+  </g>
+  <line x1="420" y1="634" x2="427" y2="634" stroke="#616e88" stroke-width="1.5"/>
+  <!-- Pin 15 (Left) -->
+  <circle cx="435" cy="672" r="7" fill="#81a1c1" stroke="#1e242c" stroke-width="2"/>
+  <text x="435" y="676" font-family="sans-serif" font-size="9" font-weight="700" fill="#1e242c" text-anchor="middle">15</text>
+  <!-- Label Card Left -->
+  <g transform="translate(55, 657)">
+    <rect width="365" height="30" rx="6" fill="#252b36" stroke="#81a1c1" stroke-opacity="0.4" stroke-width="1.5"/>
+    <rect width="70" height="30" rx="6" fill="#81a1c1" fill-opacity="0.2"/>
+    <text x="35" y="19" font-family="sans-serif" font-size="11" font-weight="700" fill="#81a1c1" text-anchor="middle">D13</text>
+    <text x="80" y="19" font-family="sans-serif" font-size="11" fill="#eceff4">HSPI_MOSI / 觸控 Touch4</text>
+  </g>
+  <line x1="420" y1="672" x2="427" y2="672" stroke="#81a1c1" stroke-width="1.5"/>
+  <!-- Pin 16 (Left) -->
+  <circle cx="435" cy="710" r="7" fill="#4c566a" stroke="#1e242c" stroke-width="2"/>
+  <text x="435" y="714" font-family="sans-serif" font-size="9" font-weight="700" fill="#1e242c" text-anchor="middle">16</text>
+  <!-- Label Card Left -->
+  <g transform="translate(55, 695)">
+    <rect width="365" height="30" rx="6" fill="#252b36" stroke="#4c566a" stroke-opacity="0.4" stroke-width="1.5"/>
+    <rect width="70" height="30" rx="6" fill="#4c566a" fill-opacity="0.2"/>
+    <text x="35" y="19" font-family="sans-serif" font-size="11" font-weight="700" fill="#4c566a" text-anchor="middle">D9</text>
+    <text x="80" y="19" font-family="sans-serif" font-size="11" fill="#eceff4">SPIHD (內部 Flash 專用)</text>
+  </g>
+  <line x1="420" y1="710" x2="427" y2="710" stroke="#4c566a" stroke-width="1.5"/>
+  <!-- Pin 17 (Left) -->
+  <circle cx="435" cy="748" r="7" fill="#4c566a" stroke="#1e242c" stroke-width="2"/>
+  <text x="435" y="752" font-family="sans-serif" font-size="9" font-weight="700" fill="#1e242c" text-anchor="middle">17</text>
+  <!-- Label Card Left -->
+  <g transform="translate(55, 733)">
+    <rect width="365" height="30" rx="6" fill="#252b36" stroke="#4c566a" stroke-opacity="0.4" stroke-width="1.5"/>
+    <rect width="70" height="30" rx="6" fill="#4c566a" fill-opacity="0.2"/>
+    <text x="35" y="19" font-family="sans-serif" font-size="11" font-weight="700" fill="#4c566a" text-anchor="middle">D10</text>
+    <text x="80" y="19" font-family="sans-serif" font-size="11" fill="#eceff4">SPIWP (內部 Flash 專用)</text>
+  </g>
+  <line x1="420" y1="748" x2="427" y2="748" stroke="#4c566a" stroke-width="1.5"/>
+  <!-- Pin 18 (Left) -->
+  <circle cx="435" cy="786" r="7" fill="#4c566a" stroke="#1e242c" stroke-width="2"/>
+  <text x="435" y="790" font-family="sans-serif" font-size="9" font-weight="700" fill="#1e242c" text-anchor="middle">18</text>
+  <!-- Label Card Left -->
+  <g transform="translate(55, 771)">
+    <rect width="365" height="30" rx="6" fill="#252b36" stroke="#4c566a" stroke-opacity="0.4" stroke-width="1.5"/>
+    <rect width="70" height="30" rx="6" fill="#4c566a" fill-opacity="0.2"/>
+    <text x="35" y="19" font-family="sans-serif" font-size="11" font-weight="700" fill="#4c566a" text-anchor="middle">D11</text>
+    <text x="80" y="19" font-family="sans-serif" font-size="11" fill="#eceff4">SPICS0 (內部 Flash 專用)</text>
+  </g>
+  <line x1="420" y1="786" x2="427" y2="786" stroke="#4c566a" stroke-width="1.5"/>
+  <!-- Pin 19 (Left) -->
+  <circle cx="435" cy="824" r="7" fill="#bf616a" stroke="#1e242c" stroke-width="2"/>
+  <text x="435" y="828" font-family="sans-serif" font-size="9" font-weight="700" fill="#1e242c" text-anchor="middle">19</text>
+  <!-- Label Card Left -->
+  <g transform="translate(55, 809)">
+    <rect width="365" height="30" rx="6" fill="#252b36" stroke="#bf616a" stroke-opacity="0.4" stroke-width="1.5"/>
+    <rect width="70" height="30" rx="6" fill="#bf616a" fill-opacity="0.2"/>
+    <text x="35" y="19" font-family="sans-serif" font-size="11" font-weight="700" fill="#bf616a" text-anchor="middle">5V</text>
+    <text x="80" y="19" font-family="sans-serif" font-size="11" fill="#eceff4">5V 系統主電源輸入</text>
+  </g>
+  <line x1="420" y1="824" x2="427" y2="824" stroke="#bf616a" stroke-width="1.5"/>
+  <!-- Pin 20 (Right) -->
+  <circle cx="665" cy="140" r="7" fill="#616e88" stroke="#1e242c" stroke-width="2"/>
+  <text x="665" y="144" font-family="sans-serif" font-size="9" font-weight="700" fill="#1e242c" text-anchor="middle">20</text>
+  <!-- Label Card Right -->
+  <g transform="translate(680, 125)">
+    <rect width="365" height="30" rx="6" fill="#252b36" stroke="#616e88" stroke-opacity="0.4" stroke-width="1.5"/>
+    <rect width="70" height="30" rx="6" fill="#616e88" fill-opacity="0.2"/>
+    <text x="35" y="19" font-family="sans-serif" font-size="11" font-weight="700" fill="#616e88" text-anchor="middle">GND</text>
+    <text x="80" y="19" font-family="sans-serif" font-size="11" fill="#eceff4">系統接地 (0V)</text>
+  </g>
+  <line x1="673" y1="140" x2="680" y2="140" stroke="#616e88" stroke-width="1.5"/>
+  <!-- Pin 21 (Right) -->
+  <circle cx="665" cy="178" r="7" fill="#81a1c1" stroke="#1e242c" stroke-width="2"/>
+  <text x="665" y="182" font-family="sans-serif" font-size="9" font-weight="700" fill="#1e242c" text-anchor="middle">21</text>
+  <!-- Label Card Right -->
+  <g transform="translate(680, 163)">
+    <rect width="365" height="30" rx="6" fill="#252b36" stroke="#81a1c1" stroke-opacity="0.4" stroke-width="1.5"/>
+    <rect width="70" height="30" rx="6" fill="#81a1c1" fill-opacity="0.2"/>
+    <text x="35" y="19" font-family="sans-serif" font-size="11" font-weight="700" fill="#81a1c1" text-anchor="middle">D23</text>
+    <text x="80" y="19" font-family="sans-serif" font-size="11" fill="#eceff4">VSPI_MOSI / 通用 I/O</text>
+  </g>
+  <line x1="673" y1="178" x2="680" y2="178" stroke="#81a1c1" stroke-width="1.5"/>
+  <!-- Pin 22 (Right) -->
+  <circle cx="665" cy="216" r="7" fill="#88c0d0" stroke="#1e242c" stroke-width="2"/>
+  <text x="665" y="220" font-family="sans-serif" font-size="9" font-weight="700" fill="#1e242c" text-anchor="middle">22</text>
+  <!-- Label Card Right -->
+  <g transform="translate(680, 201)">
+    <rect width="365" height="30" rx="6" fill="#252b36" stroke="#88c0d0" stroke-opacity="0.4" stroke-width="1.5"/>
+    <rect width="70" height="30" rx="6" fill="#88c0d0" fill-opacity="0.2"/>
+    <text x="35" y="19" font-family="sans-serif" font-size="11" font-weight="700" fill="#88c0d0" text-anchor="middle">D22</text>
+    <text x="80" y="19" font-family="sans-serif" font-size="11" fill="#eceff4">I²C SCL 時脈線</text>
+  </g>
+  <line x1="673" y1="216" x2="680" y2="216" stroke="#88c0d0" stroke-width="1.5"/>
+  <!-- Pin 23 (Right) -->
+  <circle cx="665" cy="254" r="7" fill="#d08770" stroke="#1e242c" stroke-width="2"/>
+  <text x="665" y="258" font-family="sans-serif" font-size="9" font-weight="700" fill="#1e242c" text-anchor="middle">23</text>
+  <!-- Label Card Right -->
+  <g transform="translate(680, 239)">
+    <rect width="365" height="30" rx="6" fill="#252b36" stroke="#d08770" stroke-opacity="0.4" stroke-width="1.5"/>
+    <rect width="70" height="30" rx="6" fill="#d08770" fill-opacity="0.2"/>
+    <text x="35" y="19" font-family="sans-serif" font-size="11" font-weight="700" fill="#d08770" text-anchor="middle">TX</text>
+    <text x="80" y="19" font-family="sans-serif" font-size="11" fill="#eceff4">UART0 TXD 序列傳送</text>
+  </g>
+  <line x1="673" y1="254" x2="680" y2="254" stroke="#d08770" stroke-width="1.5"/>
+  <!-- Pin 24 (Right) -->
+  <circle cx="665" cy="292" r="7" fill="#d08770" stroke="#1e242c" stroke-width="2"/>
+  <text x="665" y="296" font-family="sans-serif" font-size="9" font-weight="700" fill="#1e242c" text-anchor="middle">24</text>
+  <!-- Label Card Right -->
+  <g transform="translate(680, 277)">
+    <rect width="365" height="30" rx="6" fill="#252b36" stroke="#d08770" stroke-opacity="0.4" stroke-width="1.5"/>
+    <rect width="70" height="30" rx="6" fill="#d08770" fill-opacity="0.2"/>
+    <text x="35" y="19" font-family="sans-serif" font-size="11" font-weight="700" fill="#d08770" text-anchor="middle">RX</text>
+    <text x="80" y="19" font-family="sans-serif" font-size="11" fill="#eceff4">UART0 RXD 序列接收</text>
+  </g>
+  <line x1="673" y1="292" x2="680" y2="292" stroke="#d08770" stroke-width="1.5"/>
+  <!-- Pin 25 (Right) -->
+  <circle cx="665" cy="330" r="7" fill="#88c0d0" stroke="#1e242c" stroke-width="2"/>
+  <text x="665" y="334" font-family="sans-serif" font-size="9" font-weight="700" fill="#1e242c" text-anchor="middle">25</text>
+  <!-- Label Card Right -->
+  <g transform="translate(680, 315)">
+    <rect width="365" height="30" rx="6" fill="#252b36" stroke="#88c0d0" stroke-opacity="0.4" stroke-width="1.5"/>
+    <rect width="70" height="30" rx="6" fill="#88c0d0" fill-opacity="0.2"/>
+    <text x="35" y="19" font-family="sans-serif" font-size="11" font-weight="700" fill="#88c0d0" text-anchor="middle">D21</text>
+    <text x="80" y="19" font-family="sans-serif" font-size="11" fill="#eceff4">I²C SDA 資料線</text>
+  </g>
+  <line x1="673" y1="330" x2="680" y2="330" stroke="#88c0d0" stroke-width="1.5"/>
+  <!-- Pin 26 (Right) -->
+  <circle cx="665" cy="368" r="7" fill="#616e88" stroke="#1e242c" stroke-width="2"/>
+  <text x="665" y="372" font-family="sans-serif" font-size="9" font-weight="700" fill="#1e242c" text-anchor="middle">26</text>
+  <!-- Label Card Right -->
+  <g transform="translate(680, 353)">
+    <rect width="365" height="30" rx="6" fill="#252b36" stroke="#616e88" stroke-opacity="0.4" stroke-width="1.5"/>
+    <rect width="70" height="30" rx="6" fill="#616e88" fill-opacity="0.2"/>
+    <text x="35" y="19" font-family="sans-serif" font-size="11" font-weight="700" fill="#616e88" text-anchor="middle">GND</text>
+    <text x="80" y="19" font-family="sans-serif" font-size="11" fill="#eceff4">系統接地 (0V)</text>
+  </g>
+  <line x1="673" y1="368" x2="680" y2="368" stroke="#616e88" stroke-width="1.5"/>
+  <!-- Pin 27 (Right) -->
+  <circle cx="665" cy="406" r="7" fill="#81a1c1" stroke="#1e242c" stroke-width="2"/>
+  <text x="665" y="410" font-family="sans-serif" font-size="9" font-weight="700" fill="#1e242c" text-anchor="middle">27</text>
+  <!-- Label Card Right -->
+  <g transform="translate(680, 391)">
+    <rect width="365" height="30" rx="6" fill="#252b36" stroke="#81a1c1" stroke-opacity="0.4" stroke-width="1.5"/>
+    <rect width="70" height="30" rx="6" fill="#81a1c1" fill-opacity="0.2"/>
+    <text x="35" y="19" font-family="sans-serif" font-size="11" font-weight="700" fill="#81a1c1" text-anchor="middle">D19</text>
+    <text x="80" y="19" font-family="sans-serif" font-size="11" fill="#eceff4">VSPI_MISO / 通用 I/O</text>
+  </g>
+  <line x1="673" y1="406" x2="680" y2="406" stroke="#81a1c1" stroke-width="1.5"/>
+  <!-- Pin 28 (Right) -->
+  <circle cx="665" cy="444" r="7" fill="#81a1c1" stroke="#1e242c" stroke-width="2"/>
+  <text x="665" y="448" font-family="sans-serif" font-size="9" font-weight="700" fill="#1e242c" text-anchor="middle">28</text>
+  <!-- Label Card Right -->
+  <g transform="translate(680, 429)">
+    <rect width="365" height="30" rx="6" fill="#252b36" stroke="#81a1c1" stroke-opacity="0.4" stroke-width="1.5"/>
+    <rect width="70" height="30" rx="6" fill="#81a1c1" fill-opacity="0.2"/>
+    <text x="35" y="19" font-family="sans-serif" font-size="11" font-weight="700" fill="#81a1c1" text-anchor="middle">D18</text>
+    <text x="80" y="19" font-family="sans-serif" font-size="11" fill="#eceff4">VSPI_CLK 時脈</text>
+  </g>
+  <line x1="673" y1="444" x2="680" y2="444" stroke="#81a1c1" stroke-width="1.5"/>
+  <!-- Pin 29 (Right) -->
+  <circle cx="665" cy="482" r="7" fill="#81a1c1" stroke="#1e242c" stroke-width="2"/>
+  <text x="665" y="486" font-family="sans-serif" font-size="9" font-weight="700" fill="#1e242c" text-anchor="middle">29</text>
+  <!-- Label Card Right -->
+  <g transform="translate(680, 467)">
+    <rect width="365" height="30" rx="6" fill="#252b36" stroke="#81a1c1" stroke-opacity="0.4" stroke-width="1.5"/>
+    <rect width="70" height="30" rx="6" fill="#81a1c1" fill-opacity="0.2"/>
+    <text x="35" y="19" font-family="sans-serif" font-size="11" font-weight="700" fill="#81a1c1" text-anchor="middle">D5</text>
+    <text x="80" y="19" font-family="sans-serif" font-size="11" fill="#eceff4">VSPI_CS0 / Strapping 腳</text>
+  </g>
+  <line x1="673" y1="482" x2="680" y2="482" stroke="#81a1c1" stroke-width="1.5"/>
+  <!-- Pin 30 (Right) -->
+  <circle cx="665" cy="520" r="7" fill="#d08770" stroke="#1e242c" stroke-width="2"/>
+  <text x="665" y="524" font-family="sans-serif" font-size="9" font-weight="700" fill="#1e242c" text-anchor="middle">30</text>
+  <!-- Label Card Right -->
+  <g transform="translate(680, 505)">
+    <rect width="365" height="30" rx="6" fill="#252b36" stroke="#d08770" stroke-opacity="0.4" stroke-width="1.5"/>
+    <rect width="70" height="30" rx="6" fill="#d08770" fill-opacity="0.2"/>
+    <text x="35" y="19" font-family="sans-serif" font-size="11" font-weight="700" fill="#d08770" text-anchor="middle">TX2</text>
+    <text x="80" y="19" font-family="sans-serif" font-size="11" fill="#eceff4">UART2 TXD 傳送</text>
+  </g>
+  <line x1="673" y1="520" x2="680" y2="520" stroke="#d08770" stroke-width="1.5"/>
+  <!-- Pin 31 (Right) -->
+  <circle cx="665" cy="558" r="7" fill="#d08770" stroke="#1e242c" stroke-width="2"/>
+  <text x="665" y="562" font-family="sans-serif" font-size="9" font-weight="700" fill="#1e242c" text-anchor="middle">31</text>
+  <!-- Label Card Right -->
+  <g transform="translate(680, 543)">
+    <rect width="365" height="30" rx="6" fill="#252b36" stroke="#d08770" stroke-opacity="0.4" stroke-width="1.5"/>
+    <rect width="70" height="30" rx="6" fill="#d08770" fill-opacity="0.2"/>
+    <text x="35" y="19" font-family="sans-serif" font-size="11" font-weight="700" fill="#d08770" text-anchor="middle">RX2</text>
+    <text x="80" y="19" font-family="sans-serif" font-size="11" fill="#eceff4">UART2 RXD 接收</text>
+  </g>
+  <line x1="673" y1="558" x2="680" y2="558" stroke="#d08770" stroke-width="1.5"/>
+  <!-- Pin 32 (Right) -->
+  <circle cx="665" cy="596" r="7" fill="#88c0d0" stroke="#1e242c" stroke-width="2"/>
+  <text x="665" y="600" font-family="sans-serif" font-size="9" font-weight="700" fill="#1e242c" text-anchor="middle">32</text>
+  <!-- Label Card Right -->
+  <g transform="translate(680, 581)">
+    <rect width="365" height="30" rx="6" fill="#252b36" stroke="#88c0d0" stroke-opacity="0.4" stroke-width="1.5"/>
+    <rect width="70" height="30" rx="6" fill="#88c0d0" fill-opacity="0.2"/>
+    <text x="35" y="19" font-family="sans-serif" font-size="11" font-weight="700" fill="#88c0d0" text-anchor="middle">D4</text>
+    <text x="80" y="19" font-family="sans-serif" font-size="11" fill="#eceff4">ADC2_CH0 / 觸控 Touch0</text>
+  </g>
+  <line x1="673" y1="596" x2="680" y2="596" stroke="#88c0d0" stroke-width="1.5"/>
+  <!-- Pin 33 (Right) -->
+  <circle cx="665" cy="634" r="7" fill="#a3be8c" stroke="#1e242c" stroke-width="2"/>
+  <text x="665" y="638" font-family="sans-serif" font-size="9" font-weight="700" fill="#1e242c" text-anchor="middle">33</text>
+  <!-- Label Card Right -->
+  <g transform="translate(680, 619)">
+    <rect width="365" height="30" rx="6" fill="#252b36" stroke="#a3be8c" stroke-opacity="0.4" stroke-width="1.5"/>
+    <rect width="70" height="30" rx="6" fill="#a3be8c" fill-opacity="0.2"/>
+    <text x="35" y="19" font-family="sans-serif" font-size="11" font-weight="700" fill="#a3be8c" text-anchor="middle">D2</text>
+    <text x="80" y="19" font-family="sans-serif" font-size="11" fill="#eceff4">板載藍色 LED / Strapping</text>
+  </g>
+  <line x1="673" y1="634" x2="680" y2="634" stroke="#a3be8c" stroke-width="1.5"/>
+  <!-- Pin 34 (Right) -->
+  <circle cx="665" cy="672" r="7" fill="#81a1c1" stroke="#1e242c" stroke-width="2"/>
+  <text x="665" y="676" font-family="sans-serif" font-size="9" font-weight="700" fill="#1e242c" text-anchor="middle">34</text>
+  <!-- Label Card Right -->
+  <g transform="translate(680, 657)">
+    <rect width="365" height="30" rx="6" fill="#252b36" stroke="#81a1c1" stroke-opacity="0.4" stroke-width="1.5"/>
+    <rect width="70" height="30" rx="6" fill="#81a1c1" fill-opacity="0.2"/>
+    <text x="35" y="19" font-family="sans-serif" font-size="11" font-weight="700" fill="#81a1c1" text-anchor="middle">D15</text>
+    <text x="80" y="19" font-family="sans-serif" font-size="11" fill="#eceff4">HSPI_CS0 / 觸控 Touch3</text>
+  </g>
+  <line x1="673" y1="672" x2="680" y2="672" stroke="#81a1c1" stroke-width="1.5"/>
+  <!-- Pin 35 (Right) -->
+  <circle cx="665" cy="710" r="7" fill="#4c566a" stroke="#1e242c" stroke-width="2"/>
+  <text x="665" y="714" font-family="sans-serif" font-size="9" font-weight="700" fill="#1e242c" text-anchor="middle">35</text>
+  <!-- Label Card Right -->
+  <g transform="translate(680, 695)">
+    <rect width="365" height="30" rx="6" fill="#252b36" stroke="#4c566a" stroke-opacity="0.4" stroke-width="1.5"/>
+    <rect width="70" height="30" rx="6" fill="#4c566a" fill-opacity="0.2"/>
+    <text x="35" y="19" font-family="sans-serif" font-size="11" font-weight="700" fill="#4c566a" text-anchor="middle">D8</text>
+    <text x="80" y="19" font-family="sans-serif" font-size="11" fill="#eceff4">SPID (內部 Flash 專用)</text>
+  </g>
+  <line x1="673" y1="710" x2="680" y2="710" stroke="#4c566a" stroke-width="1.5"/>
+  <!-- Pin 36 (Right) -->
+  <circle cx="665" cy="748" r="7" fill="#4c566a" stroke="#1e242c" stroke-width="2"/>
+  <text x="665" y="752" font-family="sans-serif" font-size="9" font-weight="700" fill="#1e242c" text-anchor="middle">36</text>
+  <!-- Label Card Right -->
+  <g transform="translate(680, 733)">
+    <rect width="365" height="30" rx="6" fill="#252b36" stroke="#4c566a" stroke-opacity="0.4" stroke-width="1.5"/>
+    <rect width="70" height="30" rx="6" fill="#4c566a" fill-opacity="0.2"/>
+    <text x="35" y="19" font-family="sans-serif" font-size="11" font-weight="700" fill="#4c566a" text-anchor="middle">D7</text>
+    <text x="80" y="19" font-family="sans-serif" font-size="11" fill="#eceff4">SPIQ (內部 Flash 專用)</text>
+  </g>
+  <line x1="673" y1="748" x2="680" y2="748" stroke="#4c566a" stroke-width="1.5"/>
+  <!-- Pin 37 (Right) -->
+  <circle cx="665" cy="786" r="7" fill="#4c566a" stroke="#1e242c" stroke-width="2"/>
+  <text x="665" y="790" font-family="sans-serif" font-size="9" font-weight="700" fill="#1e242c" text-anchor="middle">37</text>
+  <!-- Label Card Right -->
+  <g transform="translate(680, 771)">
+    <rect width="365" height="30" rx="6" fill="#252b36" stroke="#4c566a" stroke-opacity="0.4" stroke-width="1.5"/>
+    <rect width="70" height="30" rx="6" fill="#4c566a" fill-opacity="0.2"/>
+    <text x="35" y="19" font-family="sans-serif" font-size="11" font-weight="700" fill="#4c566a" text-anchor="middle">D6</text>
+    <text x="80" y="19" font-family="sans-serif" font-size="11" fill="#eceff4">SPICLK (內部 Flash 專用)</text>
+  </g>
+  <line x1="673" y1="786" x2="680" y2="786" stroke="#4c566a" stroke-width="1.5"/>
+  <!-- Pin 38 (Right) -->
+  <circle cx="665" cy="824" r="7" fill="#616e88" stroke="#1e242c" stroke-width="2"/>
+  <text x="665" y="828" font-family="sans-serif" font-size="9" font-weight="700" fill="#1e242c" text-anchor="middle">38</text>
+  <!-- Label Card Right -->
+  <g transform="translate(680, 809)">
+    <rect width="365" height="30" rx="6" fill="#252b36" stroke="#616e88" stroke-opacity="0.4" stroke-width="1.5"/>
+    <rect width="70" height="30" rx="6" fill="#616e88" fill-opacity="0.2"/>
+    <text x="35" y="19" font-family="sans-serif" font-size="11" font-weight="700" fill="#616e88" text-anchor="middle">GND</text>
+    <text x="80" y="19" font-family="sans-serif" font-size="11" fill="#eceff4">系統接地 (0V)</text>
+  </g>
+  <line x1="673" y1="824" x2="680" y2="824" stroke="#616e88" stroke-width="1.5"/>
+</svg>

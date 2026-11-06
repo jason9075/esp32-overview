@@ -1,0 +1,28 @@
+{
+  "name": "esp32-overview",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Interactive 3D ESP32 NodeMCU-32S 38-Pin Type-C Hardware Explorer built with Three.js and TypeScript",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview --port 4173 --strictPort",
+    "typecheck": "tsc --noEmit",
+    "check:hardware": "node tools/check-hardware-model.mjs",
+    "generate:model": "blender --background --python tools/generate_board_model.py",
+    "generate:svg": "python3 tools/generate_gpio_svg.py",
+    "screenshots": "node tools/screenshots.mjs"
+  },
+  "dependencies": {
+    "three": "^0.174.0",
+    "three-mesh-bvh": "^0.9.18"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.58.2",
+    "@types/three": "^0.174.0",
+    "playwright": "^1.58.2",
+    "typescript": "^5.7.3",
+    "vite": "^6.2.0"
+  }
+}

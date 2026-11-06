@@ -1,0 +1,394 @@
+[
+  {
+    "meshName": "pcb",
+    "side": "both",
+    "vertexCount": 224,
+    "polygonCount": 170,
+    "bbox": {
+      "min": [
+        -25.75,
+        -0.8,
+        -14.25
+      ],
+      "max": [
+        25.75,
+        0.8,
+        14.25
+      ]
+    },
+    "center": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "size": [
+      51.5,
+      1.6,
+      28.5
+    ]
+  },
+  {
+    "meshName": "esp_wroom_32",
+    "side": "top",
+    "vertexCount": 16,
+    "polygonCount": 12,
+    "bbox": {
+      "min": [
+        -0.25,
+        0.8,
+        -9.0
+      ],
+      "max": [
+        25.25,
+        3.8,
+        9.0
+      ]
+    },
+    "center": [
+      12.5,
+      2.3,
+      0.0
+    ],
+    "size": [
+      25.5,
+      3.0,
+      18.0
+    ]
+  },
+  {
+    "meshName": "antenna_pcb",
+    "side": "top",
+    "vertexCount": 8,
+    "polygonCount": 6,
+    "bbox": {
+      "min": [
+        18.25,
+        1.6,
+        -7.5
+      ],
+      "max": [
+        24.75,
+        1.68,
+        7.5
+      ]
+    },
+    "center": [
+      21.5,
+      1.64,
+      0.0
+    ],
+    "size": [
+      6.5,
+      0.08,
+      15.0
+    ]
+  },
+  {
+    "meshName": "usb_type_c",
+    "side": "top",
+    "vertexCount": 16,
+    "polygonCount": 12,
+    "bbox": {
+      "min": [
+        -27.45,
+        0.8,
+        -3.65
+      ],
+      "max": [
+        -18.55,
+        4.0,
+        3.65
+      ]
+    },
+    "center": [
+      -23.0,
+      2.4,
+      0.0
+    ],
+    "size": [
+      8.9,
+      3.2,
+      7.3
+    ]
+  },
+  {
+    "meshName": "cp2102",
+    "side": "top",
+    "vertexCount": 8,
+    "polygonCount": 6,
+    "bbox": {
+      "min": [
+        -15.5,
+        0.8,
+        -2.5
+      ],
+      "max": [
+        -10.5,
+        1.7,
+        2.5
+      ]
+    },
+    "center": [
+      -13.0,
+      1.25,
+      0.0
+    ],
+    "size": [
+      5.0,
+      0.9,
+      5.0
+    ]
+  },
+  {
+    "meshName": "ams1117",
+    "side": "top",
+    "vertexCount": 16,
+    "polygonCount": 12,
+    "bbox": {
+      "min": [
+        -9.75,
+        0.8,
+        -8.2
+      ],
+      "max": [
+        -3.25,
+        2.4,
+        -3.45
+      ]
+    },
+    "center": [
+      -6.5,
+      1.6,
+      -5.825
+    ],
+    "size": [
+      6.5,
+      1.6,
+      4.75
+    ]
+  },
+  {
+    "meshName": "btn_en",
+    "side": "top",
+    "vertexCount": 16,
+    "polygonCount": 12,
+    "bbox": {
+      "min": [
+        -22.4,
+        0.8,
+        -9.0
+      ],
+      "max": [
+        -18.6,
+        3.1,
+        -6.0
+      ]
+    },
+    "center": [
+      -20.5,
+      1.95,
+      -7.5
+    ],
+    "size": [
+      3.8,
+      2.3,
+      3.0
+    ]
+  },
+  {
+    "meshName": "btn_boot",
+    "side": "top",
+    "vertexCount": 16,
+    "polygonCount": 12,
+    "bbox": {
+      "min": [
+        -22.4,
+        0.8,
+        6.0
+      ],
+      "max": [
+        -18.6,
+        3.1,
+        9.0
+      ]
+    },
+    "center": [
+      -20.5,
+      1.95,
+      7.5
+    ],
+    "size": [
+      3.8,
+      2.3,
+      3.0
+    ]
+  },
+  {
+    "meshName": "led_pwr",
+    "side": "top",
+    "vertexCount": 8,
+    "polygonCount": 6,
+    "bbox": {
+      "min": [
+        -17.3,
+        0.8,
+        -7.4
+      ],
+      "max": [
+        -15.7,
+        1.3,
+        -6.6
+      ]
+    },
+    "center": [
+      -16.5,
+      1.05,
+      -7.0
+    ],
+    "size": [
+      1.6,
+      0.5,
+      0.8
+    ]
+  },
+  {
+    "meshName": "led_io2",
+    "side": "top",
+    "vertexCount": 8,
+    "polygonCount": 6,
+    "bbox": {
+      "min": [
+        -17.3,
+        0.8,
+        6.6
+      ],
+      "max": [
+        -15.7,
+        1.3,
+        7.4
+      ]
+    },
+    "center": [
+      -16.5,
+      1.05,
+      7.0
+    ],
+    "size": [
+      1.6,
+      0.5,
+      0.8
+    ]
+  },
+  {
+    "meshName": "transistor_auto_boot",
+    "side": "top",
+    "vertexCount": 16,
+    "polygonCount": 12,
+    "bbox": {
+      "min": [
+        -18.9,
+        0.8,
+        -3.45
+      ],
+      "max": [
+        -16.1,
+        1.8,
+        3.45
+      ]
+    },
+    "center": [
+      -17.5,
+      1.3,
+      0.0
+    ],
+    "size": [
+      2.8,
+      1.0,
+      6.9
+    ]
+  },
+  {
+    "meshName": "passives",
+    "side": "top",
+    "vertexCount": 40,
+    "polygonCount": 30,
+    "bbox": {
+      "min": [
+        -20.25,
+        0.8,
+        -6.0
+      ],
+      "max": [
+        -1.9,
+        2.6,
+        5.3
+      ]
+    },
+    "center": [
+      -11.075,
+      1.7,
+      -0.35
+    ],
+    "size": [
+      18.35,
+      1.8,
+      11.3
+    ]
+  },
+  {
+    "meshName": "pin_headers_left",
+    "side": "both",
+    "vertexCount": 160,
+    "polygonCount": 120,
+    "bbox": {
+      "min": [
+        -24.15,
+        -2.95,
+        -12.7
+      ],
+      "max": [
+        24.15,
+        8.55,
+        -10.16
+      ]
+    },
+    "center": [
+      0.0,
+      2.8,
+      -11.43
+    ],
+    "size": [
+      48.3,
+      11.5,
+      2.54
+    ]
+  },
+  {
+    "meshName": "pin_headers_right",
+    "side": "both",
+    "vertexCount": 160,
+    "polygonCount": 120,
+    "bbox": {
+      "min": [
+        -24.15,
+        -2.95,
+        10.16
+      ],
+      "max": [
+        24.15,
+        8.55,
+        12.7
+      ]
+    },
+    "center": [
+      0.0,
+      2.8,
+      11.43
+    ],
+    "size": [
+      48.3,
+      11.5,
+      2.54
+    ]
+  }
+]
