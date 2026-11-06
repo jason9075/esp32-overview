@@ -1,6 +1,6 @@
-# ESP32 NodeMCU-32S (38-Pin Type-C) 3D 互動硬體架構導覽
+# ESP32 NodeMCU-32S (38-Pin Type-C) Interactive 3D Hardware Explorer
 
-這是一個基於 **Three.js + TypeScript + Vite** 建構的高互動性 ESP32 NodeMCU-32S（38-Pin USB Type-C 版本）3D 硬體架構探索專案。提供毫米級精確度 3D 模型、正反面全元件點擊聚焦、繁體中文深度硬體解析、完整的 38-Pin GPIO 腳位定義圖表以及互動引導教學。
+An interactive 3D explorer for the ESP32 NodeMCU-32S development board (38-pin, USB Type-C version), built with **Three.js + TypeScript + Vite**. It includes a millimeter-accurate 3D model and click-to-focus on every component, front and back. It also has in-depth hardware notes, a full 38-pin GPIO pinout and a guided tutorial. The in-app copy is in Traditional Chinese.
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.7-blue.svg)
@@ -8,75 +8,88 @@
 
 ---
 
-## 🌟 核心特色
+## 🌟 Features
 
-1. **真實 3D 幾何結構**：
-   - 根據真實 NodeMCU-32S 規格建模（`51.5 × 28.5 × 1.6 mm`，2.54 mm 間距 38-Pin 雙排針，0.9 吋標準麵包板排距）。
-   - 包含 USB Type-C 雙面插拔連接埠、ESP-WROOM-32 金屬屏蔽模組、2.4 GHz 倒 F 型（MIFA）PCB 天線、Silicon Labs CP2102 USB 橋接晶片、AMS1117-3.3 高效率 LDO、雙電晶體自動下載電路、實體 EN / BOOT 按鍵與電源/IO2 指示燈。
-2. **高效能 BVH 點擊拾取與光影著色**：
-   - 採用 `three-mesh-bvh` 空間加速樹，點擊拾取延遲低於 1ms。
-   - 內建 PBR 物理渲染材質與 ACESFilmic 色調對映，精準呈現金屬屏蔽罩拉絲質感與電路板霧黑防焊層。
-3. **繁體中文深度硬體解析**：
-   - 全面解析 ESP32-D0WDQ6 雙核心 Xtensa LX6 微處理器、內部 4MB QSPI Flash、40MHz 高精度晶振與射頻匹配網絡。
-   - 詳解 Type-C CC1 / CC2 5.1kΩ 下拉電阻原理、DTR/RTS 自動重設電路及 AMS1117 電源濾波設計。
-4. **完整 38-Pin GPIO 腳位圖表與 3D 標定**：
-   - 互動式 38 腳位速查表，支援依電源、I²C、UART、SPI、ADC/Touch、DAC、GPIO 類別篩選。
-   - 點擊任一腳位即可在 3D 排針上高亮顯示實體位置與電氣特性警告（如 Strapping 腳位限制、輸入專用腳等）。
-5. **逐步互動引導教學 (Interactive Tutorial)**：
-   - 引導初學者一步步認識 ESP32 開發板的核心運算中樞、天線、通訊介面與供電架構。
+1. **Realistic 3D geometry**
+   - Modeled from the real board and from photos of it: `51.5 × 28.5 × 1.6 mm`, two 19-pin headers at 2.54 mm pitch, and 0.9" row spacing that fits a standard breadboard.
+   - Includes the USB Type-C receptacle, the ESP-32 module with its RF shield, and the module's 2.4 GHz PCB antenna. Also the Silicon Labs CP2102 USB-to-UART bridge, the AMS1117-3.3 LDO and the two-transistor auto-reset circuit. Plus the EN / IO0 buttons, the status LEDs, and silkscreen on both sides with pin labels.
+   - The RF shield is textured with a perspective-corrected photo of the real module.
+2. **Fast BVH picking and PBR shading**
+   - Uses a `three-mesh-bvh` acceleration tree for fast click picking.
+   - PBR materials with ACES Filmic tone mapping show the metal shield, gloss-black solder mask and tinned joints.
+3. **In-depth hardware notes (Traditional Chinese)**
+   - Covers the ESP32-D0WDQ6 dual-core Xtensa LX6 SoC, the 4 MB QSPI flash, the 40 MHz crystal and the RF matching network.
+   - Explains the Type-C CC1 / CC2 5.1 kΩ pull-downs, the DTR/RTS auto-reset circuit and the AMS1117 power filtering.
+4. **Full 38-pin GPIO pinout with 3D markers**
+   - An interactive pin table. You can filter it by power, I²C, UART, SPI, ADC/Touch, DAC and GPIO.
+   - Click any pin to highlight where it physically sits on the 3D header. You also get its electrical notes, such as strapping-pin limits and input-only pins.
+5. **Step-by-step interactive tutorial**
+   - Walks beginners through the board's processor, antenna, interfaces and power design.
 
 ---
 
-## 🚀 快速開始
+## 🚀 Getting Started
 
-### 安裝依賴
+### Install dependencies
 ```bash
 npm install
 ```
 
-### 啟動開發伺服器
+### Start the dev server
 ```bash
 npm run dev
 ```
-瀏覽器開啟 `http://localhost:5173` 即可開始操作。
+Open `http://localhost:5173` in your browser.
 
-### 建置生產環境版本
+### Build for production
 ```bash
 npm run build
 npm run preview
 ```
 
-### 驗證硬體模型與幾何資訊
+### Validate the hardware model and geometry
 ```bash
 npm run check:hardware
 ```
 
-### 執行端對端自動化截圖驗證
+### Run the end-to-end screenshot check
 ```bash
+npm run build
 npm run screenshots
+```
+Screenshots are written to `screenshots/`. Set `CHROME_PATH` to choose the browser.
+
+### Regenerate assets
+```bash
+npm run generate:model   # Blender (headless): GLB + modelPlacements.json
+npm run generate:svg     # GPIO pinout SVGs
+python3 tools/make_shield_texture.py <top_photo.jpg>   # RF shield texture
 ```
 
 ---
 
-## 📐 座標系統與硬體規格
+## 📐 Coordinate System
 
-- **座標系統 (Three.js Y-up, 1 unit = 1 mm, 主機板中心位於原點 `(0, 0, 0)`)**:
-  - `X` (`[-25.75, +25.75] mm`): 左側 (`-X`) 為 USB Type-C 與控制開關；右側 (`+X`) 為 ESP-WROOM-32 與天線端。
-  - `Y`: 板面法線 (`+Y` 為正面元件面，`-Y` 為背面走線面；PCB 基板介於 `[-0.8, +0.8] mm`，厚度 1.6 mm)。
-  - `Z` (`[-14.25, +14.25] mm`): `-Z` 為左側 19-Pin 排針（Pin 1~19，位於 `Z = -11.43 mm`）；`+Z` 為右側 19-Pin 排針（Pin 20~38，位於 `Z = +11.43 mm`）。
+Three.js Y-up, 1 unit = 1 mm, with the board centered at the origin `(0, 0, 0)`:
 
----
-
-## 🛠️ 專案技術棧
-
-- **核心繪圖**：[Three.js](https://threejs.org/) + [three-mesh-bvh](https://github.com/gkjohnson/three-mesh-bvh)
-- **語言與架構**：TypeScript 5.7 (嚴格型別模式), 原生 DOM 元件架構
-- **構建工具**：[Vite](https://vitejs.dev/)
-- **端對端驗證**：[Playwright](https://playwright.dev/)
-- **3D 模型產生**：Blender Python 自動化流水線
+- `X` (`[-25.75, +25.75] mm`): `-X` is the USB Type-C end with the buttons. `+X` is the ESP-32 module and antenna end.
+- `Y`: the board normal. `+Y` is the component side and `-Y` the bottom side. The PCB spans `[-0.8, +0.8] mm`, 1.6 mm thick.
+- `Z` (`[-14.25, +14.25] mm`): `-Z` is the left 19-pin header (pins 1–19, at `Z = -11.43 mm`). `+Z` is the right 19-pin header (pins 20–38, at `Z = +11.43 mm`).
+  - Pin 1 (3V3) and pin 20 (GND) sit at the antenna end (`X = +22.86 mm`).
 
 ---
 
-## 📄 授權條款
+## 🛠️ Tech Stack
+
+- **Rendering**: [Three.js](https://threejs.org/) + [three-mesh-bvh](https://github.com/gkjohnson/three-mesh-bvh)
+- **Language**: TypeScript 5.7 (strict mode) with plain DOM components
+- **Build tool**: [Vite](https://vitejs.dev/)
+- **End-to-end checks**: [Playwright](https://playwright.dev/)
+- **3D model generation**: Blender Python script
+- **Deployment**: GitHub Pages via GitHub Actions (`.github/workflows/deploy.yml`, runs on every push to `main`)
+
+---
+
+## 📄 License
 
 MIT License
