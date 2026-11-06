@@ -33,6 +33,7 @@ export class InfoCardUI {
   private activeGpioPin: number | null = null;
   private gpioFilter: GpioFilterCategory = 'all';
   private collapsed = false;
+  private renderedId: string | null = null;
 
   constructor(container: HTMLElement, initialBoardPkg: BoardPackage, callbacks: InfoCardCallbacks) {
     this.container = container;
@@ -212,6 +213,8 @@ export class InfoCardUI {
               src="${escapeHtml(diagramSrc)}"
               alt="${escapeHtml(this.boardPkg.name)} 38-Pin GPIO 完整彩色腳位圖"
               class="gpio-pinout-img"
+              width="1100"
+              height="920"
             />
             <span class="zoom-badge">🔍 點擊放大檢視</span>
           </div>
@@ -418,6 +421,12 @@ export class InfoCardUI {
     const gpioSectionHtml =
       isBoardOverview || isPinHeader ? this.renderGpioPinoutSection() : '';
 
+    // Re-rendering the same component (pin select, filter chip, collapse) must not jump the scroll back to the top
+    const prevScrollTop =
+      this.renderedId === entry.id
+        ? (this.container.querySelector('.info-card-content') as HTMLElement | null)?.scrollTop ?? 0
+        : 0;
+
     this.container.innerHTML = `
       <div class="info-card-inner ${this.collapsed ? 'collapsed' : ''}">
         <div class="info-card-header">
@@ -467,6 +476,12 @@ export class InfoCardUI {
         </div>
       </div>
     `;
+
+    this.renderedId = entry.id;
+    if (prevScrollTop > 0) {
+      const content = this.container.querySelector('.info-card-content') as HTMLElement | null;
+      if (content) content.scrollTop = prevScrollTop;
+    }
   }
 
   private bindDelegatedEvents(): void {

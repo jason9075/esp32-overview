@@ -98,7 +98,7 @@ export class HighlightManager {
     group.position.set(px, py, pz);
 
     // Glowing pin sleeve around the specific 2.54mm header post
-    const sleeveGeo = new THREE.CylinderGeometry(0.85, 0.85, 5.5, 16);
+    const sleeveGeo = new THREE.CylinderGeometry(0.85, 0.85, 3.2, 16);
     const sleeveMat = new THREE.MeshStandardMaterial({
       color: pinColor,
       emissive: pinColor,
@@ -120,7 +120,7 @@ export class HighlightManager {
       roughness: 0.15,
     });
     const tipMesh = new THREE.Mesh(tipGeo, tipMat);
-    tipMesh.position.set(0, 3.6, 0);
+    tipMesh.position.set(0, 3.4, 0);
     group.add(tipMesh);
 
     this.gpioPinMarkerGroup = group;

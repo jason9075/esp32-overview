@@ -1,8 +1,8 @@
 import { GpioPinSpec } from '../types';
 
 function computePin3DPosition(side: 'left' | 'right', indexInRow: number): [number, number, number] {
-  const x = Number((-22.86 + indexInRow * 2.54).toFixed(3));
-  const y = 4.5;
+  const x = Number((22.86 - indexInRow * 2.54).toFixed(3)); // index 0 (3V3 / GND) at the antenna (+X) end
+  const y = 1.6;
   const z = side === 'left' ? -11.43 : 11.43;
   return [x, y, z];
 }
